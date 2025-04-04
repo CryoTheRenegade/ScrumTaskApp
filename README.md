@@ -14,16 +14,16 @@ A Flask-based task management application with user authentication, task sharing
 ## Setup
 
 1. Create a virtual environment:
-```bash
-python -m venv venv
+```powershell
+py -3.11 -m venv venv
 ```
 
 2. Activate the virtual environment:
 - Windows:
-```bash
+```powershell
 .\venv\Scripts\activate
 ```
-- Unix/MacOS:
+- Linux/MacOS:
 ```bash
 source venv/bin/activate
 ```
@@ -37,7 +37,7 @@ pip install -r requirements.txt
 ```
 FLASK_APP=app.py
 FLASK_ENV=development
-SECRET_KEY=your-secret-key
+SECRET_KEY=your-secret-key(please_change)
 DATABASE_URL=sqlite:///tasks.db
 ```
 
