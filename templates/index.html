@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome - Task Manager{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+        <h1 class="display-4 mb-4">Welcome to Task Manager</h1>
+        <p class="lead mb-4">A simple and efficient way to manage your tasks and collaborate with others.</p>
+        
+        {% if not current_user.is_authenticated %}
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="{{ url_for('login') }}" class="btn btn-primary btn-lg px-4 gap-3">Login</a>
+                <a href="{{ url_for('register') }}" class="btn btn-outline-secondary btn-lg px-4">Register</a>
+            </div>
+        {% else %}
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg px-4 gap-3">Go to Dashboard</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Task Management</h5>
+                <p class="card-text">Create, update, and organize your tasks with ease. Set due dates and track your progress.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Collaboration</h5>
+                <p class="card-text">Share tasks with team members and work together on projects.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">Offline Support</h5>
+                <p class="card-text">Access and manage your tasks even when you're offline. Changes sync when you're back online.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

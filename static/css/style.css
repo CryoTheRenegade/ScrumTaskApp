@@ -1,0 +1,42 @@
+.task-card {
+    transition: transform 0.2s;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.due-date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.btn-group .btn {
+    margin-right: 5px;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.alert {
+    border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+} 
