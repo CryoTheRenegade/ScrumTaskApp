@@ -15,7 +15,11 @@ A Flask-based task management application with user authentication, task sharing
 
 1. Create a virtual environment:
 ```powershell
-py -3.11 -m venv venv
+py -3.11 -m venv .venv
+```
+Or if python is between 3.8 and 3.11 for your default environment:
+```bash
+python -m venv .venv
 ```
 
 2. Activate the virtual environment:
